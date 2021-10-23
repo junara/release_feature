@@ -1,0 +1,33 @@
+module ReleaseFeature
+  module Repository
+    class YamlRepository
+
+      @path: untyped
+
+      def initialize: (path: String) -> void
+
+      def features: -> ReleaseFeature::FeatureCollection
+
+      private
+
+      def convert_to_feature_collection: (untyped data) -> untyped
+
+      def symbolize_features: (untyped features, untyped timezone) -> ReleaseFeature::FeatureCollection
+
+      def build_feature: (untyped name, untyped environment, untyped range, untyped timezone) -> Feature
+
+      def to_range_struct: (untyped range, untyped timezone) -> AccessibleRange
+
+      def cast_to_time: (String str, String timezone) -> Time
+
+      class AccessibleRange
+        attr_reader open_at: Time
+
+        attr_reader close_at: Time
+
+        def initialize: (open_at: Time, close_at: Time) -> void
+      end
+
+    end
+  end
+end

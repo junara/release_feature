@@ -1,0 +1,15 @@
+module ReleaseFeature
+  class FeatureCollection < Hash[Symbol, Hash[Symbol, Feature]]
+    def combine_features: (FeatureCollection features) -> FeatureCollection
+
+    def names: -> Array[Symbol]
+
+    def environments: -> Array[Symbol]
+
+    private
+
+    def build_environments: (Symbol name, Array[Symbol] environments, FeatureCollection features) -> Hash[untyped, untyped]
+
+    def build_feature: (Symbol name, Symbol environment, FeatureCollection features) -> Feature
+  end
+end

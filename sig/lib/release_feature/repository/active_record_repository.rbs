@@ -1,0 +1,17 @@
+module ReleaseFeature
+  module Repository
+    class ActiveRecordRepository
+      @model: untyped
+
+      def initialize: (model: ActiveRecord) -> void
+
+      def features: -> FeatureCollection
+
+      private
+
+      def convert_to_feature_collection: (untyped data) -> FeatureCollection
+
+      def build_feature: (untyped record) -> Feature
+    end
+  end
+end

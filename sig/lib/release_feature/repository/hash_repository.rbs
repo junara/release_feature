@@ -1,0 +1,18 @@
+module ReleaseFeature
+  module Repository
+    class HashRepository
+
+      @hash: { timezone: String, features: Hash[Symbol, Hash[Symbol, untyped]] }
+
+      def initialize: (hash: { timezone: String, features: Hash[Symbol, Hash[Symbol, untyped]] }) -> void
+
+      def features: -> FeatureCollection
+
+      private
+
+      def convert_to_feature_collection: (untyped data) -> untyped
+
+      def build_feature: (untyped name, untyped environment, untyped open_at, untyped close_at) -> untyped
+    end
+  end
+end

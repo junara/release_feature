@@ -1,0 +1,31 @@
+module ReleaseFeature
+  class Client
+    @environment: Symbol
+    @base_repository: Repository::YamlRepository | Repository::HashRepository | Repository::ActiveRecordRepository
+    @extra_repository: untyped | Repository::YamlRepository | Repository::HashRepository | Repository::ActiveRecordRepository
+    @refresh_interval_sec: Integer
+    @features: FeatureCollection
+
+    attr_reader updated_at: Time
+
+    def initialize: (environment: String | Symbol, base_repository: Repository::YamlRepository | Repository::HashRepository | Repository::ActiveRecordRepository, ?extra_repository: Repository::YamlRepository | Repository::HashRepository | Repository::ActiveRecordRepository, ?refresh_interval_sec: Integer) -> void
+
+    def permitted?: (Symbol feature_name, ?time: nil | Time) -> bool
+
+    def current_features: -> FeatureCollection
+
+    def refresh: -> bool
+
+    def names: -> Array[Symbol]
+
+    def environments: -> Array[Symbol]
+
+    private
+
+    def to_feature: (FeatureCollection features, Symbol name, Symbol environment) -> Feature
+
+    def expired?: (?Time? time) -> bool
+
+    def load_features: -> Time
+  end
+end

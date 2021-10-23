@@ -1,0 +1,3 @@
+module ReleaseFeature
+  VERSION: ::String
+end

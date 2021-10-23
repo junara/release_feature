@@ -1,0 +1,17 @@
+AllCops:
+  TargetRubyVersion: 2.7.4
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - '.gem_rbs_collection/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rake

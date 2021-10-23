@@ -1,0 +1,72 @@
+---
+sources:
+- name: ruby/gem_rbs_collection
+  remote: https://github.com/ruby/gem_rbs_collection.git
+  revision: main
+  repo_dir: gems
+path: ".gem_rbs_collection"
+gems:
+- name: date
+  version: '0'
+  source:
+    type: stdlib
+- name: time
+  version: '0'
+  source:
+    type: stdlib
+- name: activerecord
+  version: '6.1'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 1ffd4d31c1fdaa5fd258af2955a711d36998e6d1
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: activesupport
+  version: '6.0'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 1ffd4d31c1fdaa5fd258af2955a711d36998e6d1
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: ast
+  version: '2.4'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 1ffd4d31c1fdaa5fd258af2955a711d36998e6d1
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: listen
+  version: '3.2'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 1ffd4d31c1fdaa5fd258af2955a711d36998e6d1
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: parallel
+  version: '1.20'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 1ffd4d31c1fdaa5fd258af2955a711d36998e6d1
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: rainbow
+  version: '3.0'
+  source:
+    type: git
+    name: ruby/gem_rbs_collection
+    revision: 1ffd4d31c1fdaa5fd258af2955a711d36998e6d1
+    remote: https://github.com/ruby/gem_rbs_collection.git
+    repo_dir: gems
+- name: steep
+  version: 0.46.0
+  source:
+    type: rubygems
+- name: yaml
+  version: '0'
+  source:
+    type: stdlib

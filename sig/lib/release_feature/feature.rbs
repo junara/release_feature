@@ -1,0 +1,47 @@
+module ReleaseFeature
+  class Feature
+    attr_reader name: Symbol
+    attr_reader environment: Symbol
+    attr_reader open_at: String | Time
+    attr_reader close_at: String | Time
+    attr_reader errors: Array[String]
+
+    def initialize: (name: String | Symbol, environment: String | Symbol, open_at: String | Time, close_at: String | Time) -> void
+
+    def permitted?: (Time current_time) -> bool
+
+    private
+
+    def valid?: -> bool
+
+    def validate_all: -> Array[String]?
+
+    def errors_full_message: -> String
+
+    def initialize_errors: -> Array[untyped]
+
+    def add_error: (String attr_name, String | Time | Symbol val, String message) -> Array[String]
+
+    def validate_name: -> Array[String]?
+
+    def validate_environment: -> Array[String]?
+
+    def validate_open_at: -> Array[String]?
+
+    def validate_close_at: -> Array[String]?
+
+    def validate_range: -> Array[String]?
+
+    def str_present?: (String attr) -> bool
+
+    def time_present?: (String | Time attr) -> bool
+
+    def cast_to_sym: (Symbol key, Symbol | String str) -> Symbol
+
+    def validate_present: (Hash[Symbol, untyped] attr) -> void
+
+    def cast_to_time: (String | Time val) -> (String | Time)
+
+    def name_error_message: (Symbol name) -> String?
+  end
+end
