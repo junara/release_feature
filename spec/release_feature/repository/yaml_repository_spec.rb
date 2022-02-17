@@ -24,9 +24,9 @@ RSpec.describe ReleaseFeature::Repository::YamlRepository do
 
       where(:yaml_timezone, :yaml_name, :yaml_environment, :yaml_open_at, :yaml_close_at, :open_at, :close_at) do
         [
-          ['Asia/Tokyo', 'test_feature', 'development', '2000-01-01 00:00', '2999-01-01 00:00',
+          ['+09:00', 'test_feature', 'development', '2000-01-01 00:00', '2999-01-01 00:00',
            Time.new(2000, 1, 1, 0, 0, 0, '+09:00'), Time.new(2999, 1, 1, 0, 0, 0, '+09:00')],
-          ['Asia/Shanghai', 'test_feature', 'development', '2000-01-01 00:00', '2999-01-01 00:00',
+          ['+08:00', 'test_feature', 'development', '2000-01-01 00:00', '2999-01-01 00:00',
            Time.new(2000, 1, 1, 0, 0, 0, '+08:00'), Time.new(2999, 1, 1, 0, 0, 0, '+08:00')]
         ]
       end
@@ -42,7 +42,7 @@ RSpec.describe ReleaseFeature::Repository::YamlRepository do
     context 'when include 2 features' do
       let(:yaml) do
         <<~YAML
-          timezone: Asia/Tokyo
+          timezone: +09:00
           features:
             test_feature:
               development:

@@ -6,7 +6,7 @@ RSpec.describe ReleaseFeature::Client do
   describe '#current_features' do
     let(:yaml_repository) do
       yaml = <<~YAML
-        timezone: Asia/Tokyo
+        timezone: +09:00
         features:
           test_feature:
             development:
@@ -83,7 +83,7 @@ RSpec.describe ReleaseFeature::Client do
   describe '#refresh' do
     let(:yaml_repository) do
       yaml = <<~YAML
-        timezone: Asia/Tokyo
+        timezone: +09:00
         features:
           test_feature:
             development:

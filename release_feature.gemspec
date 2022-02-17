@@ -6,15 +6,13 @@ Gem::Specification.new do |spec|
   spec.name          = 'release_feature'
   spec.version       = ReleaseFeature::VERSION
   spec.authors       = ['junara']
-  spec.email         = ['jung5araki@gmail.com']
+  spec.email         = ['jun5araki@gmail.com']
 
   spec.summary       = 'Release feature in custom date range.'
   spec.description   = 'Release feature in custom date range.'
   spec.homepage      = 'https://github.com/junara/release_feature'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
-
-  spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
@@ -37,6 +35,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'sqlite3'
   spec.add_development_dependency 'timecop'
   spec.add_dependency 'time'
-  spec.add_dependency 'tzinfo'
   spec.add_dependency 'yaml'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end

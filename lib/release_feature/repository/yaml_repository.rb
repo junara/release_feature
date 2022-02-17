@@ -83,8 +83,7 @@ module ReleaseFeature
         day = time.day
         hour = time.hour
         minute = time.min
-        tz = TZInfo::Timezone.get(timezone)
-        tz.local_time(year, month, day, hour, minute, 0)
+        Time.new(year, month, day, hour, minute, 0, timezone)
       end
     end
   end
